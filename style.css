@@ -6,7 +6,7 @@
 
 html{
     font-size: 62.5%;
-    font-family: "poppins";
+    font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -24,234 +24,254 @@ html{
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,24,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
 :root {
-    --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
-    --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
-    --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
-    --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
-    --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
-    --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
-    --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
-    --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
-  }
-
-  body{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+  --step--2: clamp(0.69rem, calc(0.59rem + 0.52vw), 0.96rem);
+  --step--1: clamp(0.83rem, calc(0.69rem + 0.72vw), 1.20rem);
+  --step-0: clamp(1.00rem, calc(0.80rem + 0.98vw), 1.50rem);
+  --step-1: clamp(1.20rem, calc(0.94rem + 1.32vw), 1.88rem);
+  --step-2: clamp(1.44rem, calc(1.09rem + 1.76vw), 2.34rem);
+  --step-3: clamp(1.73rem, calc(1.26rem + 2.35vw), 2.93rem);
+  --step-4: clamp(2.07rem, calc(1.45rem + 3.10vw), 3.66rem);
+  --step-5: clamp(2.49rem, calc(1.67rem + 4.08vw), 4.58rem);
+}
 
 
-  nav{
-    width: 100%;
-    height: 5rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    border-bottom: 0.1rem solid rgb(233, 233, 233);
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    font-family: "poppins";
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 9;
-  }
+
+body{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
 
-  nav >h2{
-    font-weight: 700;
-    font-size: 4rem;
-  }
+
+/*---------------------------------- */
+/*-------------  Nav  -------------  */
+/*---------------------------------- */
+nav{
+  width: 100%;
+  min-height: 5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-bottom: 0.1rem solid rgb(233, 233, 233);
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  font-family: "poppins";
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
 
 
-  nav >p{
-    width: max-content;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    border-bottom: solid 3px blue;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1.4rem;
-    color: #464646;
-    align-self: center;
-  
-  }
+.fa-amilia{
+  font-weight: 700;
+  font-size: 3rem;
+  color: rgb(19, 19, 19);
+}
+
+.fa-cart-shopping{
+  cursor: pointer;
+  font-size: 2rem;
+  color: #464646;
+  align-self: center;
+}
+
+main{
+  width: 100%;
+  height: max-content;
+  display:flex;
+  flex-direction: row;
+}
+
+.container-products{
+  width: 100%;
+  height: 100%;
+  padding: 3rem;
+  display: flex;
+  flex-wrap: wrap;  
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+}
 
 
-  main{
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction: row;
-  }
 
+/*---------------------------------- */
+/*-------------  Card  ------------- */
+/*---------------------------------- */
+.card{
+  margin: auto;
+  border: solid 1px rgb(216, 216, 216);
+  width: 32rem;
+  height: 36rem;
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  cursor: pointer; 
+}
 
-  .container-products{
-    width: 100%;
-    height: 100%;
-    padding: 3rem;
-    display: flex;
-    flex-wrap: wrap;  
-    flex-direction: row;
-    gap: 2rem;
-    justify-content: center;
-  }
+img{
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
+.container-text{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
 
-  /*Card*/
-  .card{
-    margin: auto;
-    border: solid 1px rgb(216, 216, 216);
-    width: 32rem;
-    height: 36rem;
-    padding: 1rem;
-    border-radius: 6px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    cursor: pointer;
-    
-  }
+.title{
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #464646;
+}
 
-
-  img{
-    width: 100%;
-    height: 25rem;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  .container-text{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
-
-  .title{
-    font-size: 1.9rem;
-    font-weight: 700;
-    color: #464646;
-  }
-
-  .area-price{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.area-price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .container-price-i{
   display: flex;
   align-items: center;
 }
 
-  .price{  
-    font-size: 1.7rem;
-    font-weight: 600;
-    color: #a6a6a6;
-  }
+.price{  
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #a6a6a6;
+}
 
-  .fa-brands{
-    font-size: 2rem;
-    color: rgb(255, 153, 0);
-    padding-right: 1rem;
-  }
+.fa-bitcoin{
+  font-size: 2rem;
+  color: rgb(255, 153, 0);
+  padding-right: 1rem;
+}
 
-  .stars{
-    font-size: 1.6rem;
-  }
-
+.stars{
+  font-size: 1.6rem;
+}
  
 
-  /*Container Detail */
 
-  .container-detail{
-    width: 120rem;
-    height: 100vh;
-    border: solid 0.1px #f0f0f0;
-    position: sticky;
-    top: 15rem;
-    z-index: 0;
-  }
+/*---------------------------------- */
+/*-----------   Detail   ----------- */
+/*---------------------------------- */
+.container-detail{
+  min-width: 43rem;
+  height: 870px;
+  border-left: solid 0.5px #f0f0f0;
+  position: sticky;
+  top: 50px;
+  z-index: 0;
+  background-color: white;
+
+}
+
+.card-detail{
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;  
+}
+
+.area-close-modal{
+  width: 100%;
+  min-height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem;
+  border-bottom: 0.02rem solid rgb(228, 228, 228);
+
+}
+
+.title-modal{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+}
+
+/*Close Detail*/
+.fa-circle-right{
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: rgb(98, 0, 255);
+}
 
 
- 
-  .card-detail{
-    margin: auto;
-    border: solid 1px rgb(216, 216, 216);
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    border-radius: 6px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    
-  }
-
-
-  .img-detail{
-    width: 100%;
-    height: 50%;
+.img-detail{
+    width: auto;
+    height: 26rem;
     object-fit: cover;
-    border-radius: 10px;
-  }
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
 
-
-  .container-pretitle{
+.container-pretitle{
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
 
-  .pre-title-detail{
+.pre-title-detail{
     font-size: 2.5rem;
     font-weight: 600;
     color: #8d8d8d;
-  }
+}
 
-  .stars-details{
+.stars-details{
     font-size: 2.5rem;
-  }
-
-
-
-  .title-detail{
-    font-size: 4rem;
-    font-weight: 700;
-    color: #464646;
-  }
-
+}
 
 .container-text-detail{
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-  }
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 
+}
+
+.title-detail{
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #464646;
+}
 
 .area-price-detail{
   display: flex;
   align-items: end;
-  column-gap: 2rem;
-
+  column-gap: 1rem;
 }
-  
   
 .container-price-i-detail{
   display: flex;
   align-items: center;
 } 
 
-.fa-brands{
+.fa-bitcoin{
   font-size: 3rem;
   color: rgb(255, 153, 0);
   padding-right: 1rem;
 }
-
 
 .price-detail{  
   font-size: 2.6rem;
@@ -259,157 +279,143 @@ html{
   color: #747373;
 }
 
-
 .lorem-ipsum{
   width: 100%;
-  text-align: justify;
-  color: #464646;
-  font-size: 1.8rem;
+  text-align: start;
+  color: #707070;
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-
-
-.wrap-buttons{
+.box-btn-shopcarr{
   width: 100%;
   height: 5rem;
   margin-top: 2rem;
   display: flex;
-  column-gap: 2rem;
-}
-
-
-.btn-cuppon {
-  min-width: max-content;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 600;
-  font-family: "poppins";
-  background-color: rgb(255, 255, 255);
-  border: solid 3px rgb(45, 45, 180);
-  border-radius: 6px;
-  color: rgb(45, 45, 180);
-}
-
-
-
-.btn-shopping-carr {
-  width: 100%;
-  padding: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.6rem;
-  font-family: "poppins";
-  background-color: white;
-  border: solid 3px rgb(54, 141, 37);
-  border-radius: 6px;
-  color: rgb(54, 141, 37);
-}
-
-.btn-shopping-carr:hover {
-  background-color: rgb(54, 141, 37);
-  border: solid 3px rgb(54, 141, 37);
-  color: white;
-
-}
-
-
-
-/*Btn Close Detail*/
-
-.fa-regular{
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-  font-size: 3rem;
-  cursor: pointer;
-}
-
-
-
-
-
-/*Cupon*/
-.container-cuppon {
-  display: flex;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.65);
-  z-index: 12;
-  padding: 3rem;
-}
-
-.area-cuppon {
-  width: 60rem;
-  height: 72rem;
-  margin: auto;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-.title-Cuppon{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-left: 2rem;
   padding-right: 2rem;
-  height: 5rem;
-  border-bottom: solid 0.5px rgb(224, 224, 224);
+
 }
 
-.lorem-ipsum-cuppon{
+.btn-shopcarr{
   width: 100%;
-  text-align: start;
-  color: #464646;
-  font-size: 1.4rem;
-  padding: 2rem;
+  height: 5rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  background-color: rgb(98, 0, 255);;
+  color: white;
+  border: solid 3px  rgb(98, 0, 255);
 
+  border-radius: 6px;
 }
 
-.conatiner-dataproduct-cuppon{
+
+
+
+/*---------------------------------- */
+/*-------   Detail Cuppon     ------ */
+/*---------------------------------- */
+
+.container-cuppon{
+  align-self: flex-end;
+  min-width: 100%;
+  min-height: 12rem;
+  margin-top: 7rem;   
+  border-top: dashed 4px rgb(99, 99, 99);
+  border-bottom: dashed 4px rgb(99, 99, 99);
+  border-right: dashed 4px rgb(99, 99, 99);
+  padding-right: 2rem;
   display: flex;
-  flex-direction: row; 
-  padding: 2rem;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 1rem;
+  font-family: 'Courie  r New', Courier, monospace;
 }
 
-
-.img-cuppon{
-  width: 30rem;
-  
-
+.box-icon-cuppon{
+  width: auto;
+  height: 12.5rem;
+  display: flex;
+  align-items: center;
+  border-left: 4px   rgb(99, 99, 99)dashed;
+  border-right: 4px   rgb(99, 99, 99) dashed;
 }
 
-
-.text-dataproduct-cuppon{
-  width: 25rem;
-  background-color: #e6e9ed;
+.icon-cuppon{
+  width: auto;
+  height: 10rem;
 }
 
-.calc-cuppon{
+.box-info-cuppon{
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  width: 100%;
   row-gap: 1rem;
 }
 
+.title-info-cuppon{
+  font-size: 2rem;
+  font-weight: 800;
+  color: #252525;
+}
 
+.wrap-input-btn{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
 
 .input-cuppon{
-  width: clamp  (30rem , 100%, 100%);
-  height: 3.5rem;
-  border:solid 0.1px#e6e9ed;
-  border-radius: 6px;
-  background-color: #f5f5f5;
   outline: none;
+  width: 22rem;
+  height: 3.5rem;
+  border-radius: 0.6rem;
+  border: solid  #e6e9ee 0.5px;
+  padding-left: 1rem;
+  background-color: #e6e9ee ;
+}
+  
+.input-cuppon::placeholder{
+  font-size: 1.4rem;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.btn-cuppon-verify{
-  height: 3rem;
+.btn-cuppon{
+  width: max-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  height: 3.5rem;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.4rem;
+  font-weight: 700;
+  background-color: indianred;
+  color: white;
+  border: solid 1px indianred;
+  border-radius: 0.6rem;    
 }
+
+.result-info-cuppon{
+  font-size: 1.6rem;
+}
+
+
+
+/*Open and close*/
+
+
+.movimiento-cierre {
+  display: none;
+  transition: transform 0.9s ease-in-out;
+  transform: translateX(100%);
+ 
+}
+
+
+
